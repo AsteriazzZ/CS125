@@ -1,0 +1,107 @@
+testMichiganStudent: Expected 18 lines. Actual 19 lines.
+1. PASS > 'Please enter your zip code.'
+2. PASS > 'Which University CS Department was recently awarded $208 million to develop the worlds fastest computer?'
+3. PASS > '1. Illinois'
+4. PASS > '2. Michigan'
+5. PASS > '3. MIT'
+6. PASS > 'Which University CS Department designed and built the pioneering ILLIAC series?'
+7. PASS > '1. Illinois'
+8. PASS > '2. Wisconsin'
+9. PASS > '3. Berkeley'
+10. FAIL > '' Should be - 
+10.        'Which University released 'Mosaic' - the first multimedia cross-platform browser?'
+testMichiganStudent: Program output above was incorrect on output line 10
+
+testMichiganPhDStudent: Expected 18 lines. Actual 19 lines.
+1. PASS > 'Please enter your zip code.'
+2. PASS > 'Which University CS Department was recently awarded $208 million to develop the worlds fastest computer?'
+3. PASS > '1. Illinois'
+4. PASS > '2. Michigan'
+5. PASS > '3. MIT'
+6. PASS > 'Which University CS Department designed and built the pioneering ILLIAC series?'
+7. PASS > '1. Illinois'
+8. PASS > '2. Wisconsin'
+9. PASS > '3. Berkeley'
+10. FAIL > '' Should be - 
+10.        'Which University released 'Mosaic' - the first multimedia cross-platform browser?'
+testMichiganPhDStudent: Program output above was incorrect on output line 10
+
+testWisconsinStudent: Expected 18 lines. Actual 19 lines.
+1. PASS > 'Please enter your zip code.'
+2. PASS > 'Which University CS Department was recently awarded $208 million to develop the worlds fastest computer?'
+3. PASS > '1. Illinois'
+4. PASS > '2. Michigan'
+5. PASS > '3. MIT'
+6. PASS > 'Which University CS Department designed and built the pioneering ILLIAC series?'
+7. PASS > '1. Illinois'
+8. PASS > '2. Wisconsin'
+9. PASS > '3. Berkeley'
+10. FAIL > '' Should be - 
+10.        'Which University released 'Mosaic' - the first multimedia cross-platform browser?'
+testWisconsinStudent: Program output above was incorrect on output line 10
+
+File QuizMaster.java : @author comments at the beginning should list your netid
+testIllinoisStudent: Expected 19 lines. Actual 19 lines.
+1. PASS > 'Please enter your zip code.'
+2. PASS > 'Which University CS Department was recently awarded $208 million to develop the worlds fastest computer?'
+3. PASS > '1. Illinois'
+4. PASS > '2. Michigan'
+5. PASS > '3. MIT'
+6. PASS > 'Which University CS Department designed and built the pioneering ILLIAC series?'
+7. PASS > '1. Illinois'
+8. PASS > '2. Wisconsin'
+9. PASS > '3. Berkeley'
+10. FAIL > '' Should be - 
+10.        'Which University released 'Mosaic' - the first multimedia cross-platform browser?'
+testIllinoisStudent: Program output above was incorrect on output line 10
+
+File Winner.java : @author comments at the beginning should list your netid
+testB: Expected 2 lines. Actual 2 lines.
+1. PASS > 'Enter three unique integer scores.'
+2. FAIL > '1st Place:' Should be - 
+2.        '1st Place:b'
+testB: Program output above was incorrect on output line 2
+
+testC: Expected 2 lines. Actual 2 lines.
+1. PASS > 'Enter three unique integer scores.'
+2. FAIL > '1st Place:' Should be - 
+2.        '1st Place:c'
+testC: Program output above was incorrect on output line 2
+
+testA: Expected 2 lines. Actual 2 lines.
+1. PASS > 'Enter three unique integer scores.'
+2. FAIL > '1st Place:wow' Should be - 
+2.        '1st Place:a'
+testA: Program output above was incorrect on output line 2
+
+test1: Expected 2 lines. Actual 2 lines.
+1. PASS > 'Enter a number between 1 and 20 inclusive.'
+2. FAIL > '1' Should be - 
+2.        '1! = 1'
+test1: Program output above was incorrect on output line 2
+
+test10: Expected 2 lines. Actual 2 lines.
+1. PASS > 'Enter a number between 1 and 20 inclusive.'
+2. FAIL > '1' Should be - 
+2.        '8! = 40320'
+test10: Program output above was incorrect on output line 2
+
+test12: Expected 2 lines. Actual 2 lines.
+1. PASS > 'Enter a number between 1 and 20 inclusive.'
+2. FAIL > '1' Should be - 
+2.        '11! = 39916800'
+test12: Program output above was incorrect on output line 2
+
+test17: Expected 2 lines. Actual 2 lines.
+1. PASS > 'Enter a number between 1 and 20 inclusive.'
+2. FAIL > '1' Should be - 
+2.        '18! = 6402373705728000'
+test17: Program output above was incorrect on output line 2
+
+testBadInput: Expected 6 lines. Actual 2 lines.
+1. PASS > 'Enter a number between 1 and 20 inclusive.'
+2. FAIL > '1' Should be - 
+2.        'Enter a number between 1 and 20 inclusive.'
+testBadInput: Program output above was incorrect on output line 2
+testBadInput: ... Missing line #3 : Enter a number between 1 and 20 inclusive.
+

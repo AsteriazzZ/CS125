@@ -11,8 +11,8 @@ public class MyScriptPrinter {
 	 */
 	public static void main(String[] args) {
 
-		boolean output=false; //Set to true when we find the desired character
-		String name=""; // Only print lines for this character
+		boolean output = false; //Set to true when we find the desired character
+		String name = ""; // Only print lines for this character
 		
 		TextIO.putln("Which character's lines would you like? (NEO,MORPHEUS,ORACLE)");
 		name = TextIO.getln();

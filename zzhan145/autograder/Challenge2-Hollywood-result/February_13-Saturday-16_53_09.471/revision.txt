@@ -1,0 +1,11 @@
+Path: work/students/zzhan145/Challenge2-Hollywood
+URL: https://subversion.ews.illinois.edu/svn/sp16-cs125/zzhan145/Challenge2-Hollywood
+Repository Root: https://subversion.ews.illinois.edu/svn/sp16-cs125
+Repository UUID: 391430f4-0411-4dd5-8b27-250df5562fc7
+Revision: 11583
+Node Kind: directory
+Schedule: normal
+Last Changed Author: zzhan145
+Last Changed Rev: 10791
+Last Changed Date: 2016-02-09 23:49:29 -0600 (Tue, 09 Feb 2016)
+

@@ -8,13 +8,62 @@
  * Good Programming Hints: "DRY: Don't Repeat Yourself"
  * Try to make your program as short as possible.
  * TODO: add your netid to the line below
- * @author put-your-netid-here
+ * @author zzhan145
  */
 public class CaesarCipher {
 
 	public static void main(String[] strings) {
-		//TODO: Delete the following line and write your implementation here- 
-		throw new RuntimeException ("Et tu Brutus?");
+		
+		int offset;
+		String mesg;
+		
+	    TextIO.putln("Please enter the shift value (between -25..-1 and 1..25)");
+	    offset = TextIO.getlnInt();
+	    
+	    while(offset < -25 || offset > 25 || offset == 0){
+	    	TextIO.putln(offset + " is not a valid shift value.");
+	    	TextIO.putln("Please enter the shift value (between -25..-1 and 1..25)");
+	    	offset = TextIO.getlnInt();
+	    }
+	    
+	    System.out.println("Using shift value of " + offset);
+	    TextIO.putln("Please enter the source text (empty line to quit)");
+		mesg = TextIO.getln();
+
+		
+		while(!mesg.equals("")){
+			System.out.println("Source   :" + mesg);
+			System.out.print("Processed:");
+			String upperMesg = mesg.toUpperCase();
+			
+			int i = 0;
+			
+			while(i < upperMesg.length()){
+				char c = upperMesg.charAt(i);
+				
+				if(c >= 'A' && c <= 'Z'){
+					int letter = c - 'A';
+					int encrypted = (letter + offset) % 26;
+					if (encrypted<0)
+						encrypted = encrypted +26;
+					
+					c = (char) ('A' + encrypted);
+					i++;
+					TextIO.put(c);
+				}else{
+					i++;
+					TextIO.put(c);
+				}
+			    
+			 }
+			System.out.println("");
+			TextIO.putln("Please enter the source text (empty line to quit)");
+			mesg = TextIO.getln();
+		}
+		System.out.print("Bye.");
+		
+		
+		
 	}
 
 }

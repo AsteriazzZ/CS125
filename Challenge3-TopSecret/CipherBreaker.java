@@ -17,9 +17,6 @@ public class CipherBreaker {
         int numSpaces = 0;
         int numPunctuations = 0;
         
-        for (int i = 0; i < letterHistogram.length; i++) 
-        	   letterHistogram[i] = 0;
-        
         int i = 0;
         while(i < line.length()){
         	char c = line.charAt(i);

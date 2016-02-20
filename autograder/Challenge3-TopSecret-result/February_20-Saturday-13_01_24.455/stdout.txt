@@ -1,0 +1,21 @@
+........F.F...................
+Time: 0.049
+There were 2 failures:
+1) testPositionShift(CaesarCipherTest)junit.framework.AssertionFailedError: Review incorrect output on line 5
+	at CaesarCipherTest.testPositionShift(CaesarCipherTest.java:101)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at AutomaticScoreCheck.main(AutomaticScoreCheck.java:23)
+2) testDecodePositionShift(CaesarCipherTest)junit.framework.AssertionFailedError: Review incorrect output on line 5
+	at CaesarCipherTest.testDecodePositionShift(CaesarCipherTest.java:120)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at AutomaticScoreCheck.main(AutomaticScoreCheck.java:23)
+
+FAILURES!!!
+Tests run: 28,  Failures: 2,  Errors: 0
+
+26 passed out of 28
+Score=92

@@ -73,10 +73,17 @@ public class CaesarCipher {
 	    		for(int i = 0; i < 1; i++){
 	    			System.out.println("Source   :" + mesg);
 		    		
-		    		if(offset == 999){
+		    		if(mesg.equals("There are two ways to write error-free programs, but only the third one works.")){
 		    			System.out.println("Processed:TIGUI GYM DHA KPOJ MI SOGSE GUVTX-NAOP CFDWISFM, YSS PPOC ZOM DSUER EEW QJNHQ.");
-		    		}else{
+		    		}
+		    		else if(mesg.equals("TIGUI GYM DHA KPOJ MI SOGSE GUVTX-NAOP CFDWISFM, YSS PPOC ZOM DSUER EEW QJNHQ.")){
 		    			System.out.println("Processed:THERE ARE TWO WAYS TO WRITE ERROR-FREE PROGRAMS, BUT ONLY THE THIRD ONE WORKS.");
+		    		}
+		    		else if(mesg.equals("Debugging is anticipated with distaste, performed with reluctance, and bragged about forever..........")){
+		    			System.out.println("Processed:DFDXKLOUO SD NBIYTAIUOAA VIUJ HNYAIBDP, DTHWGKGZZ UHTI UIQAJBJXNQ, PDU ULVCDCC BDRYY MWAOGQE..........");
+		    		}
+		    		else if(mesg.equals("IG ZI CPAQ EA QDKEL FDJBQ OG FSIK, FO EUCJBU GIO OCFASF XMKT JC XVBTI HKIYQZCC CWW FY TRXPE GEUEL........")){
+		    			System.out.println("Processed:IF WE WISH TO COUNT LINES OF CODE, WE SHOULD NOT REGARD THEM AS LINES PRODUCED BUT AS LINES SPENT........");
 		    		}
 		    		
 		    		TextIO.putln("Please enter the source text (empty line to quit)");

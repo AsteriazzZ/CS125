@@ -69,26 +69,42 @@ public class CaesarCipher {
 	    	mesg = TextIO.getln();
 	    	
 	    	while(!mesg.equals("")){
+	    		System.out.println("Source   :" + mesg);
+				System.out.print("Processed:");
+				String upperMesg = mesg.toUpperCase();
+				
+				int i = 0;
+				
+				while(i < upperMesg.length()){
+					char c = upperMesg.charAt(i);
+					
+					if(c >= 'A' && c <= 'Z'){
+						int letter = c - 'A';
+						int encrypted;
+						
+						if(offset == 999)
+							encrypted = (letter + i) % 26;
+						else
+							encrypted = (letter - i) % 26;
+						
+						
+						if (encrypted < 0)
+							encrypted = encrypted +26;
+						
+						c = (char) ('A' + encrypted);
+						i++;
+						TextIO.put(c);
+						
+					}else{
+						i++;
+						TextIO.put(c);
+					}
+				    
+				 }
+				System.out.println("");
+				TextIO.putln("Please enter the source text (empty line to quit)");
+				mesg = TextIO.getln();
 	    		
-	    		for(int i = 0; i < 1; i++){
-	    			System.out.println("Source   :" + mesg);
-		    		
-		    		if(mesg.equals("There are two ways to write error-free programs, but only the third one works.")){
-		    			System.out.println("Processed:TIGUI GYM DHA KPOJ MI SOGSE GUVTX-NAOP CFDWISFM, YSS PPOC ZOM DSUER EEW QJNHQ.");
-		    		}
-		    		else if(mesg.equals("TIGUI GYM DHA KPOJ MI SOGSE GUVTX-NAOP CFDWISFM, YSS PPOC ZOM DSUER EEW QJNHQ.")){
-		    			System.out.println("Processed:THERE ARE TWO WAYS TO WRITE ERROR-FREE PROGRAMS, BUT ONLY THE THIRD ONE WORKS.");
-		    		}
-		    		else if(mesg.equals("Debugging is anticipated with distaste, performed with reluctance, and bragged about forever..........")){
-		    			System.out.println("Processed:DFDXKLOUO SD NBIYTAIUOAA VIUJ HNYAIBDP, DTHWGKGZZ UHTI UIQAJBJXNQ, PDU ULVCDCC BDRYY MWAOGQE..........");
-		    		}
-		    		else if(mesg.equals("IG ZI CPAQ EA QDKEL FDJBQ OG FSIK, FO EUCJBU GIO OCFASF XMKT JC XVBTI HKIYQZCC CWW FY TRXPE GEUEL........")){
-		    			System.out.println("Processed:IF WE WISH TO COUNT LINES OF CODE, WE SHOULD NOT REGARD THEM AS LINES PRODUCED BUT AS LINES SPENT........");
-		    		}
-		    		
-		    		TextIO.putln("Please enter the source text (empty line to quit)");
-					mesg = TextIO.getln();
-	    		}
 	    		
 	    	}
 	    	System.out.print("Bye.");

@@ -1,6 +1,7 @@
 //UIUC CS125 SPRING 2016 MP. File: RainGame.java, CS125 Project: PairProgramming, Version: 2016-02-23T06:01:34-0600.233790614
 /**
  * @author zzhan145,xiaojin2
+ * @reviewed qchen39,xie33,cervant4
  */
 public class RainGame {
 
@@ -30,6 +31,7 @@ public class RainGame {
 				startTime = System.currentTimeMillis();
 				score += 3000 / elapsed;
 			}
+			
 			
 			Zen.setColor(255, 180, 255);
 			Zen.fillRect(0, 0, Zen.getZenWidth(), Zen.getZenHeight());

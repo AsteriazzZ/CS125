@@ -1,6 +1,6 @@
 //UIUC CS125 SPRING 2016 MP. File: RainGame.java, CS125 Project: PairProgramming, Version: 2016-02-23T06:01:34-0600.233790614
 /**
- * @author replace-this-with-your-netids-on-this-line-here-with-a-comma-between-them
+ * @author zzhan145,xiaojin2
  */
 public class RainGame {
 
@@ -10,7 +10,7 @@ public class RainGame {
 		// Do not put your name or your UIN. 
 		// REMEMBER TO COMMIT this file...
 	
-		int x=0, y=0, dx=0, dy=0, score = 0;
+		int x=0, y=0, dx=0, dy=0, score = 0, level = 0;
 		String text = "";
 		long startTime =System.currentTimeMillis();
 		
@@ -18,26 +18,35 @@ public class RainGame {
 		while (Zen.isRunning()) {
 
 			if (text.length() == 0) {
-				x = 0;
-				y = Zen.getZenHeight() / 2;
-				dx = 2;
-				dy = 0;
-				text = "" + (int) (Math.random() * 999);
+				level = score / 10;
+				
+				x = 2 * (int)(Zen.getZenWidth() * Math.random()) / 3;
+				y = 2 * (int)(Zen.getZenHeight() * Math.random()) / 3;
+				
+				dx = 1 + level + level * (int)(2 * Math.random());
+				dy = 1 + level + level * (int)(2 * Math.random());
+				
+				text = "" + (char)('a' + 26 * Math.random()) + (char)('a' + 26 * Math.random()) + (char)('a' + 26 * Math.random());
 				long elapsed = System.currentTimeMillis() - startTime;
 				startTime = System.currentTimeMillis();
-				score += 3000 / elapsed;
+				score = score + (int)(3000 / elapsed);
 			}
-			Zen.setColor(255, 0, 255);
+			
+			Zen.setColor(255, 180, 255);
 			Zen.fillRect(0, 0, Zen.getZenWidth(), Zen.getZenHeight());
-
 			Zen.setColor(0, 255, 0);
 			Zen.drawText(text, x, y);
 			
-			Zen.drawText("Level: 0",10,30);
-			Zen.drawText("Score: 0",10,60);
+			Zen.drawText("Level: " + level, 10, 60);
+			Zen.drawText("Score: " + score, 10, 115);
 			
 			x += dx;
 			y += dy;
+			if(x >= Zen.getZenWidth() || y >= Zen.getZenHeight()){
+				x = 2 * (int)(Zen.getZenWidth()) / 3;
+				y = 2 * (int)(Zen.getZenHeight()) / 3;
+			}
+			
 			
 			// Find out what keys the user has been pressing.
 			String user = Zen.getEditText();
@@ -52,6 +61,7 @@ public class RainGame {
 			}
 			
 			Zen.sleep(90);// sleep for 90 milliseconds
+			Zen.flipBuffer();
 
 		}
 	}

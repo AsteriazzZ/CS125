@@ -10,7 +10,7 @@ public class RainGame {
 		// Do not put your name or your UIN. 
 		// REMEMBER TO COMMIT this file...
 	
-		int x=0, y=0, dx=0, dy=0, score = 0, level = 0;
+		int x=0, y=0, dx=0, dy=0, score = 0,level = 0;
 		String text = "";
 		long startTime =System.currentTimeMillis();
 		
@@ -18,35 +18,33 @@ public class RainGame {
 		while (Zen.isRunning()) {
 
 			if (text.length() == 0) {
-				level = score / 10;
+				level =score/10;
+				x = 2*(int)(Zen.getZenWidth() *Math.random())/3;
+				y = 2*(int)(Zen.getZenHeight() *Math.random())/3;
 				
-				x = 2 * (int)(Zen.getZenWidth() * Math.random()) / 3;
-				y = 2 * (int)(Zen.getZenHeight() * Math.random()) / 3;
+				dx = 1+level+level*(int)(2*Math.random());
+				dy = 1+level+level*(int)(2*Math.random());
 				
-				dx = 1 + level + level * (int)(2 * Math.random());
-				dy = 1 + level + level * (int)(2 * Math.random());
-				
-				text = "" + (char)('a' + 26 * Math.random()) + (char)('a' + 26 * Math.random()) + (char)('a' + 26 * Math.random());
+				text = "" +(char) ('a'+(Math.random() * 26))+(char) ('a'+(Math.random() * 26))+(char) ('a'+(Math.random() * 26)) ;//(int) (Math.random() * 999)
 				long elapsed = System.currentTimeMillis() - startTime;
 				startTime = System.currentTimeMillis();
-				score = score + (int)(3000 / elapsed);
+				score += 3000 / elapsed;
 			}
 			
 			Zen.setColor(255, 180, 255);
 			Zen.fillRect(0, 0, Zen.getZenWidth(), Zen.getZenHeight());
-			Zen.setColor(0, 255, 0);
+			Zen.setColor(250, 64+(int)(Math.random() * 64), 0);//(int)(Math.random() * 255)
 			Zen.drawText(text, x, y);
 			
-			Zen.drawText("Level: " + level, 10, 60);
-			Zen.drawText("Score: " + score, 10, 115);
-			
+			Zen.drawText("Level:"+level,10,60);
+			Zen.drawText("Score:"+score,10,115);
+		
 			x += dx;
 			y += dy;
-			if(x >= Zen.getZenWidth() || y >= Zen.getZenHeight()){
-				x = 2 * (int)(Zen.getZenWidth()) / 3;
-				y = 2 * (int)(Zen.getZenHeight()) / 3;
+			if(x>=Zen.getZenWidth()||y>=Zen.getZenHeight()){
+				x = 2*(int)(Zen.getZenWidth() *Math.random())/3;
+				y = 2*(int)(Zen.getZenHeight() *Math.random())/3;
 			}
-			
 			
 			// Find out what keys the user has been pressing.
 			String user = Zen.getEditText();

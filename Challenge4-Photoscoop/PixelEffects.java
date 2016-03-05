@@ -4,15 +4,22 @@
  *
  * Todo: Put your netid (i.e. username) in the line below
  * 
- * @author put-your-netid-here
+ * @author zzhan145
  */
 public class PixelEffects {
 
 	/** Copies the source image to a new 2D integer image */
 	public static int[][] copy(int[][] source) {
 		// Create a NEW 2D integer array and copy the colors across
-		// See redeye code below
-		return null; // Fix Me
+		// See red eye code below
+		
+		int[][] copyColor = new int[source.length][source[0].length];
+		
+		for(int i = 0; i < source.length; i++){
+			for(int j = 0; j < source[0].length; j++)
+				copyColor[i][j] = source[i][j];
+		}
+		return copyColor;
 	}
 	/**
 	 * Resize the array image to the new width and height
@@ -24,10 +31,23 @@ public class PixelEffects {
 	 * @return
 	 */
 	public static int[][] resize(int[][] source, int newWidth, int newHeight) {
-		return null; // Fix Me
 		// Hints: Use two nested for loops between 0... newWidth-1 and 0.. newHeight-1 inclusive.
 		// Hint: You can just use relative proportion to calculate the x (or y coordinate)  in the original image.
 		// For example if you're setting a pixel halfway across the image, you should be reading half way across the original image too.
+
+		int[][] resized = new int[newWidth][newHeight];
+		int origWidth = source.length;
+		int origHeight = source[0].length;
+		double prop1 = (double) origWidth / newWidth;
+		double prop2 = (double) origHeight / newHeight;
+		
+		for (int i = 0; i < newWidth; i++) {
+			for (int j = 0; j < newHeight; j++) {
+				resized[i][j] = source[(int) (i * prop1)][(int) (j * prop2)];
+			}
+		}
+		return resized;
+		
 	}
 
 	/**
@@ -35,11 +55,11 @@ public class PixelEffects {
 	 * delegate the work to resize()!
 	 */
 	public static int[][] half(int[][] source) {
-		return null; // Fix Me
+		return PixelEffects.resize(source, source.length / 2, source[0].length / 2);
 	}
 	
 	/**
-	 * Create a new image array that is the same dimesions of the reference
+	 * Create a new image array that is the same dimensions of the reference
 	 * array. The array may be larger or smaller than the source. Hint -
 	 * this methods should be just one line - delegate the work to resize()!
 	 * 
@@ -49,22 +69,65 @@ public class PixelEffects {
 	 * @return the resized image
 	 */
 	public static int[][] resize(int[][] source, int[][] reference) {
-		return null; // Fix Me
+		return PixelEffects.resize(source, reference.length, reference[0].length);
 	}
 
 	/** Flip the image vertically */
 	public static int[][] flip(int[][] source) {
-		return null;// Fix Me
+		
+		int srcW = source.length;
+		int srcH = source[0].length;
+		int tgtW = srcW;
+		int tgtH = srcH;
+		int[][] target = new int[tgtW][tgtH];
+		
+		for(int tgtX = 0; tgtX < tgtW; tgtX++){
+			for(int tgtY = 0; tgtY < tgtH; tgtY++){
+				int srcX = tgtX;
+				int srcY = tgtH - 1 - tgtY;
+				target[tgtX][tgtY] = source[srcX][srcY];
+			}
+		}
+		return target;
+		
 	}
 
 	/** Reverse the image horizontally */
 	public static int[][] mirror(int[][] source) {
-		return null;// Fix Me
+		
+		int srcW = source.length;
+		int srcH = source[0].length;
+		int tgtW = srcW;
+		int tgtH = srcH;
+		int[][] target = new int[tgtW][tgtH];
+		
+		for(int tgtX = 0; tgtX < tgtW; tgtX++){
+			for(int tgtY = 0; tgtY < tgtH; tgtY++){
+				int srcX = tgtW - 1 - tgtX;
+				int srcY = tgtY;
+				target[tgtX][tgtY] = source[srcX][srcY];
+			}
+		}
+		return target;
 	}
 
 	/** Rotate the image */
 	public static int[][] rotateLeft(int[][] source) {
-		return null;
+		
+		int srcW = source.length;
+		int srcH = source[0].length;
+		int tgtW = srcH;
+		int tgtH = srcW;
+		int[][] target = new int[tgtW][tgtH];
+		
+		for(int tgtX = 0; tgtX < tgtW; tgtX++){
+			for(int tgtY = 0; tgtY < tgtH; tgtY++){
+				int srcX = tgtH - tgtY - 1;
+				int srcY = tgtX;
+				target[tgtX][tgtY] = source[srcX][srcY];
+			}
+		}
+		return target;
 	}
 
 	/** Merge the red,blue,green components from two images */
@@ -72,8 +135,29 @@ public class PixelEffects {
 		// The output should be the same size as the input. Scale (x,y) values
 		// when reading the background
 		// (e.g. so the far right pixel of the source is merged with the
-		// far-right pixel ofthe background).
-		return sourceA;
+		// far-right pixel of the background).
+		
+		int[][] merged = new int[sourceA.length][sourceA[0].length];
+		
+		for(int i = 0; i < sourceA.length; i++){
+			for(int j = 0; j < sourceA[0].length; j++){
+				
+				int redAvg = (RGBUtilities.toRed(sourceA[i][j]) + RGBUtilities.toRed(sourceB[i][j])) / 2;
+				if(redAvg > 255)
+					redAvg = 255;
+				
+				int greenAvg = (RGBUtilities.toGreen(sourceA[i][j]) + RGBUtilities.toGreen(sourceB[i][j])) / 2;
+				if(greenAvg > 255)
+					greenAvg = 255;
+				
+				int blueAvg = (RGBUtilities.toBlue(sourceA[i][j]) + RGBUtilities.toBlue(sourceB[i][j])) / 2;
+				if(greenAvg > 255)
+					greenAvg = 255;
+				
+				merged[i][j] = RGBUtilities.toRGB(redAvg, greenAvg, blueAvg);
+			}
+		}
+		return merged;
 	}
 
 	/**
@@ -84,6 +168,18 @@ public class PixelEffects {
 		// If the image has a different size than the background use the
 		// resize() method
 		// create an image the same as the background size.
+		
+		foreImage = PixelEffects.resize(foreImage, backImage);
+
+		for (int i = 0; i < backImage.length; i++) {
+			for (int j = 0; j < backImage[0].length; j++) {
+				if (RGBUtilities.toRed(foreImage[i][j]) == 0
+						&& RGBUtilities.toBlue(foreImage[i][j]) == 0
+						&& RGBUtilities.toGreen(foreImage[i][j]) != 0) {
+					foreImage[i][j] = (backImage[i][j]);
+				}
+			}
+		}
 		return foreImage;
 	}
 
@@ -111,8 +207,22 @@ public class PixelEffects {
 		// You need to invent your own image effect
 		// Minimum boring requirements to pass autograder:
 		
+		//A filter which 'greys out' an image by averaging each pixel with white.
+		source = PixelEffects.resize(source, sourceB);
+		
+		for(int i = 0; i < source.length; i++){
+			for(int j = 0; j < source[0].length; j++){
+				
+				int r = (RGBUtilities.toRed(source[i][j]) + 255) / 2;
+				int g = (RGBUtilities.toGreen(source[i][j]) + 255) / 2;
+				int b = (RGBUtilities.toBlue(source[i][j]) + 255) / 2;
+				
+				source[i][j] = RGBUtilities.toRGB(r, g, b);
+			}
+		}
+		
 		// Does not ask for any user input and returns a new 2D array
 		// Todo: remove this return null
-		return null;
+		return source;
 	}
 }

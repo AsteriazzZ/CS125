@@ -3,7 +3,7 @@
  * 
  * Todo: Put your netid (i.e. username) in the line below
  * 
- * @author put-your-netid-here
+ * @author zzhan145
  */
 
 public class RGBUtilities {
@@ -19,15 +19,18 @@ public class RGBUtilities {
  * @return the red component (0..255)
  */
 	public static int toRed(int rgb) {
-		return 0x80; // FIX ME
+		rgb = (rgb >> 16) & 0xFF;
+		return rgb;
 	}
 
 	public static int toGreen(int rgb) {
-		return 0x80; // FIX THIS
+		rgb = (rgb >> 8) & 0xFF;
+		return rgb;
 	}
 
 	public static int toBlue(int rgb) {
-		return 0x80; // FIX THIS
+		rgb = rgb & 0xFF;
+		return rgb;
 	}
 
 	/**
@@ -38,7 +41,8 @@ public class RGBUtilities {
 	 * @return a single integer representation the rgb color (8 bits per component) rrggbb
 	 */
 	static int toRGB(int r, int g, int b) {
-		return r + g + b; // FIX THIS
+		int rgb = (r << 16) + (g << 8) + b;
+		return rgb;
 	}
 
 }

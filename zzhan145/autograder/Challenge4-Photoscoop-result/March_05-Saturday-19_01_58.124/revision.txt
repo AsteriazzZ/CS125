@@ -1,0 +1,11 @@
+Path: work/students/zzhan145/Challenge4-Photoscoop
+URL: https://subversion.ews.illinois.edu/svn/sp16-cs125/zzhan145/Challenge4-Photoscoop
+Repository Root: https://subversion.ews.illinois.edu/svn/sp16-cs125
+Repository UUID: 391430f4-0411-4dd5-8b27-250df5562fc7
+Revision: 26857
+Node Kind: directory
+Schedule: normal
+Last Changed Author: zzhan145
+Last Changed Rev: 26094
+Last Changed Date: 2016-03-04 18:55:01 -0600 (Fri, 04 Mar 2016)
+

@@ -1,0 +1,7 @@
+......................
+Time: 0.035
+
+OK (22 tests)
+
+22 passed out of 22
+Score=100

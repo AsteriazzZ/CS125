@@ -1,0 +1,503 @@
+    [javac] Compiling 12 source files to .
+    [javac] ./CallAStaticMethodTest.java:21: cannot find symbol
+    [javac] symbol  : variable CallAStaticMethod
+    [javac] location: class CallAStaticMethodTest
+    [javac] 		CallAStaticMethod.main(new String[] {});
+    [javac] 		^
+    [javac] ./GeocacheListTest.java:12: cannot find symbol
+    [javac] symbol  : class GeocacheList
+    [javac] location: class GeocacheListTest
+    [javac] 		GeocacheList list = new GeocacheList();
+    [javac] 		^
+    [javac] ./GeocacheListTest.java:12: cannot find symbol
+    [javac] symbol  : class GeocacheList
+    [javac] location: class GeocacheListTest
+    [javac] 		GeocacheList list = new GeocacheList();
+    [javac] 		                        ^
+    [javac] ./GeocacheListTest.java:14: cannot find symbol
+    [javac] symbol  : class Geocache
+    [javac] location: class GeocacheListTest
+    [javac] 		Geocache p = new Geocache(1, 2);
+    [javac] 		^
+    [javac] ./GeocacheListTest.java:14: cannot find symbol
+    [javac] symbol  : class Geocache
+    [javac] location: class GeocacheListTest
+    [javac] 		Geocache p = new Geocache(1, 2);
+    [javac] 		                 ^
+    [javac] ./GeocacheListTest.java:18: cannot find symbol
+    [javac] symbol  : class Geocache
+    [javac] location: class GeocacheListTest
+    [javac] 		Geocache p2 = new Geocache(3, 4);
+    [javac] 		^
+    [javac] ./GeocacheListTest.java:18: cannot find symbol
+    [javac] symbol  : class Geocache
+    [javac] location: class GeocacheListTest
+    [javac] 		Geocache p2 = new Geocache(3, 4);
+    [javac] 		                  ^
+    [javac] ./GeocacheListTest.java:26: cannot find symbol
+    [javac] symbol  : class GeocacheList
+    [javac] location: class GeocacheListTest
+    [javac] 		GeocacheList list = new GeocacheList();
+    [javac] 		^
+    [javac] ./GeocacheListTest.java:26: cannot find symbol
+    [javac] symbol  : class GeocacheList
+    [javac] location: class GeocacheListTest
+    [javac] 		GeocacheList list = new GeocacheList();
+    [javac] 		                        ^
+    [javac] ./GeocacheListTest.java:27: cannot find symbol
+    [javac] symbol  : class Geocache
+    [javac] location: class GeocacheListTest
+    [javac] 		Geocache p1 = new Geocache(10, 20);
+    [javac] 		^
+    [javac] ./GeocacheListTest.java:27: cannot find symbol
+    [javac] symbol  : class Geocache
+    [javac] location: class GeocacheListTest
+    [javac] 		Geocache p1 = new Geocache(10, 20);
+    [javac] 		                  ^
+    [javac] ./GeocacheListTest.java:28: cannot find symbol
+    [javac] symbol  : class Geocache
+    [javac] location: class GeocacheListTest
+    [javac] 		Geocache p2 = new Geocache(30, 40);
+    [javac] 		^
+    [javac] ./GeocacheListTest.java:28: cannot find symbol
+    [javac] symbol  : class Geocache
+    [javac] location: class GeocacheListTest
+    [javac] 		Geocache p2 = new Geocache(30, 40);
+    [javac] 		                  ^
+    [javac] ./GeocacheListTest.java:31: cannot find symbol
+    [javac] symbol  : class GeocacheList
+    [javac] location: class GeocacheListTest
+    [javac] 		GeocacheList acopy = new GeocacheList(list, false);
+    [javac] 		^
+    [javac] ./GeocacheListTest.java:31: cannot find symbol
+    [javac] symbol  : class GeocacheList
+    [javac] location: class GeocacheListTest
+    [javac] 		GeocacheList acopy = new GeocacheList(list, false);
+    [javac] 		                         ^
+    [javac] ./GeocacheListTest.java:42: cannot find symbol
+    [javac] symbol  : class Geocache
+    [javac] location: class GeocacheListTest
+    [javac] 		list.add(new Geocache(50, 60));
+    [javac] 		             ^
+    [javac] ./GeocacheListTest.java:47: cannot find symbol
+    [javac] symbol  : class GeocacheList
+    [javac] location: class GeocacheListTest
+    [javac] 		GeocacheList list = new GeocacheList();
+    [javac] 		^
+    [javac] ./GeocacheListTest.java:47: cannot find symbol
+    [javac] symbol  : class GeocacheList
+    [javac] location: class GeocacheListTest
+    [javac] 		GeocacheList list = new GeocacheList();
+    [javac] 		                        ^
+    [javac] ./GeocacheListTest.java:48: cannot find symbol
+    [javac] symbol  : class Geocache
+    [javac] location: class GeocacheListTest
+    [javac] 		Geocache p1 = new Geocache(10, 20);
+    [javac] 		^
+    [javac] ./GeocacheListTest.java:48: cannot find symbol
+    [javac] symbol  : class Geocache
+    [javac] location: class GeocacheListTest
+    [javac] 		Geocache p1 = new Geocache(10, 20);
+    [javac] 		                  ^
+    [javac] ./GeocacheListTest.java:49: cannot find symbol
+    [javac] symbol  : class Geocache
+    [javac] location: class GeocacheListTest
+    [javac] 		Geocache p2 = new Geocache(30, 40);
+    [javac] 		^
+    [javac] ./GeocacheListTest.java:49: cannot find symbol
+    [javac] symbol  : class Geocache
+    [javac] location: class GeocacheListTest
+    [javac] 		Geocache p2 = new Geocache(30, 40);
+    [javac] 		                  ^
+    [javac] ./GeocacheListTest.java:52: cannot find symbol
+    [javac] symbol  : class GeocacheList
+    [javac] location: class GeocacheListTest
+    [javac] 		GeocacheList acopy = new GeocacheList(list, true);
+    [javac] 		^
+    [javac] ./GeocacheListTest.java:52: cannot find symbol
+    [javac] symbol  : class GeocacheList
+    [javac] location: class GeocacheListTest
+    [javac] 		GeocacheList acopy = new GeocacheList(list, true);
+    [javac] 		                         ^
+    [javac] ./GeocacheListTest.java:68: cannot find symbol
+    [javac] symbol  : class Geocache
+    [javac] location: class GeocacheListTest
+    [javac] 		list.add(new Geocache(50, 60));
+    [javac] 		             ^
+    [javac] ./GeocacheListTest.java:73: cannot find symbol
+    [javac] symbol  : class GeocacheList
+    [javac] location: class GeocacheListTest
+    [javac] 		GeocacheList list = new GeocacheList();
+    [javac] 		^
+    [javac] ./GeocacheListTest.java:73: cannot find symbol
+    [javac] symbol  : class GeocacheList
+    [javac] location: class GeocacheListTest
+    [javac] 		GeocacheList list = new GeocacheList();
+    [javac] 		                        ^
+    [javac] ./GeocacheListTest.java:74: cannot find symbol
+    [javac] symbol  : class Geocache
+    [javac] location: class GeocacheListTest
+    [javac] 		Geocache p1 = new Geocache(10, 20);
+    [javac] 		^
+    [javac] ./GeocacheListTest.java:74: cannot find symbol
+    [javac] symbol  : class Geocache
+    [javac] location: class GeocacheListTest
+    [javac] 		Geocache p1 = new Geocache(10, 20);
+    [javac] 		                  ^
+    [javac] ./GeocacheListTest.java:75: cannot find symbol
+    [javac] symbol  : class Geocache
+    [javac] location: class GeocacheListTest
+    [javac] 		Geocache p2 = new Geocache(30, 40);
+    [javac] 		^
+    [javac] ./GeocacheListTest.java:75: cannot find symbol
+    [javac] symbol  : class Geocache
+    [javac] location: class GeocacheListTest
+    [javac] 		Geocache p2 = new Geocache(30, 40);
+    [javac] 		                  ^
+    [javac] ./GeocacheListTest.java:76: cannot find symbol
+    [javac] symbol  : class Geocache
+    [javac] location: class GeocacheListTest
+    [javac] 		Geocache p3 = new Geocache(50, 60);
+    [javac] 		^
+    [javac] ./GeocacheListTest.java:76: cannot find symbol
+    [javac] symbol  : class Geocache
+    [javac] location: class GeocacheListTest
+    [javac] 		Geocache p3 = new Geocache(50, 60);
+    [javac] 		                  ^
+    [javac] ./GeocacheListTest.java:91: cannot find symbol
+    [javac] symbol  : class GeocacheList
+    [javac] location: class GeocacheListTest
+    [javac] 		GeocacheList list = new GeocacheList();
+    [javac] 		^
+    [javac] ./GeocacheListTest.java:91: cannot find symbol
+    [javac] symbol  : class GeocacheList
+    [javac] location: class GeocacheListTest
+    [javac] 		GeocacheList list = new GeocacheList();
+    [javac] 		                        ^
+    [javac] ./GeocacheListTest.java:92: cannot find symbol
+    [javac] symbol  : class Geocache
+    [javac] location: class GeocacheListTest
+    [javac] 		Geocache p1 = new Geocache(1, 2);
+    [javac] 		^
+    [javac] ./GeocacheListTest.java:92: cannot find symbol
+    [javac] symbol  : class Geocache
+    [javac] location: class GeocacheListTest
+    [javac] 		Geocache p1 = new Geocache(1, 2);
+    [javac] 		                  ^
+    [javac] ./GeocacheListTest.java:93: cannot find symbol
+    [javac] symbol  : class Geocache
+    [javac] location: class GeocacheListTest
+    [javac] 		Geocache p2 = new Geocache(3, 4);
+    [javac] 		^
+    [javac] ./GeocacheListTest.java:93: cannot find symbol
+    [javac] symbol  : class Geocache
+    [javac] location: class GeocacheListTest
+    [javac] 		Geocache p2 = new Geocache(3, 4);
+    [javac] 		                  ^
+    [javac] ./GeocacheListTest.java:94: cannot find symbol
+    [javac] symbol  : class Geocache
+    [javac] location: class GeocacheListTest
+    [javac] 		Geocache p3 = new Geocache(5, 6);
+    [javac] 		^
+    [javac] ./GeocacheListTest.java:94: cannot find symbol
+    [javac] symbol  : class Geocache
+    [javac] location: class GeocacheListTest
+    [javac] 		Geocache p3 = new Geocache(5, 6);
+    [javac] 		                  ^
+    [javac] ./GeocacheListTest.java:103: cannot find symbol
+    [javac] symbol  : class GeocacheList
+    [javac] location: class GeocacheListTest
+    [javac] 		AutomaticScoreCheck.checkPublicPrivateModifiers(GeocacheList.class);
+    [javac] 		                                                ^
+    [javac] ./GeocacheTest.java:12: cannot find symbol
+    [javac] symbol  : class Geocache
+    [javac] location: class GeocacheTest
+    [javac] 		Geocache p = new Geocache(11.5, 21.6);
+    [javac] 		^
+    [javac] ./GeocacheTest.java:12: cannot find symbol
+    [javac] symbol  : class Geocache
+    [javac] location: class GeocacheTest
+    [javac] 		Geocache p = new Geocache(11.5, 21.6);
+    [javac] 		                 ^
+    [javac] ./GeocacheTest.java:18: cannot find symbol
+    [javac] symbol  : class Geocache
+    [javac] location: class GeocacheTest
+    [javac] 		Geocache other = new Geocache(3.4, 5.6);
+    [javac] 		^
+    [javac] ./GeocacheTest.java:18: cannot find symbol
+    [javac] symbol  : class Geocache
+    [javac] location: class GeocacheTest
+    [javac] 		Geocache other = new Geocache(3.4, 5.6);
+    [javac] 		                     ^
+    [javac] ./GeocacheTest.java:19: cannot find symbol
+    [javac] symbol  : class Geocache
+    [javac] location: class GeocacheTest
+    [javac] 		Geocache p = new Geocache(other);
+    [javac] 		^
+    [javac] ./GeocacheTest.java:19: cannot find symbol
+    [javac] symbol  : class Geocache
+    [javac] location: class GeocacheTest
+    [javac] 		Geocache p = new Geocache(other);
+    [javac] 		                 ^
+    [javac] ./GeocacheTest.java:25: cannot find symbol
+    [javac] symbol  : variable Geocache
+    [javac] location: class GeocacheTest
+    [javac] 		Geocache.resetCount();
+    [javac] 		^
+    [javac] ./GeocacheTest.java:26: cannot find symbol
+    [javac] symbol  : variable Geocache
+    [javac] location: class GeocacheTest
+    [javac] 		assertEquals(0, Geocache.getNumGeocachesCreated());
+    [javac] 		                ^
+    [javac] ./GeocacheTest.java:27: cannot find symbol
+    [javac] symbol  : class Geocache
+    [javac] location: class GeocacheTest
+    [javac] 		Geocache other = new Geocache(3.1, 5.7);
+    [javac] 		^
+    [javac] ./GeocacheTest.java:27: cannot find symbol
+    [javac] symbol  : class Geocache
+    [javac] location: class GeocacheTest
+    [javac] 		Geocache other = new Geocache(3.1, 5.7);
+    [javac] 		                     ^
+    [javac] ./GeocacheTest.java:28: cannot find symbol
+    [javac] symbol  : variable Geocache
+    [javac] location: class GeocacheTest
+    [javac] 		assertEquals(1, Geocache.getNumGeocachesCreated());
+    [javac] 		                ^
+    [javac] ./GeocacheTest.java:29: cannot find symbol
+    [javac] symbol  : class Geocache
+    [javac] location: class GeocacheTest
+    [javac] 		new Geocache(other);
+    [javac] 		    ^
+    [javac] ./GeocacheTest.java:30: cannot find symbol
+    [javac] symbol  : variable Geocache
+    [javac] location: class GeocacheTest
+    [javac] 		assertEquals(2, Geocache.getNumGeocachesCreated());
+    [javac] 		                ^
+    [javac] ./GeocacheTest.java:31: cannot find symbol
+    [javac] symbol  : class Geocache
+    [javac] location: class GeocacheTest
+    [javac] 		new Geocache(other);
+    [javac] 		    ^
+    [javac] ./GeocacheTest.java:32: cannot find symbol
+    [javac] symbol  : variable Geocache
+    [javac] location: class GeocacheTest
+    [javac] 		assertEquals(3, Geocache.getNumGeocachesCreated());
+    [javac] 		                ^
+    [javac] ./GeocacheTest.java:33: cannot find symbol
+    [javac] symbol  : variable Geocache
+    [javac] location: class GeocacheTest
+    [javac] 		Geocache.resetCount();
+    [javac] 		^
+    [javac] ./GeocacheTest.java:34: cannot find symbol
+    [javac] symbol  : variable Geocache
+    [javac] location: class GeocacheTest
+    [javac] 		assertEquals(0, Geocache.getNumGeocachesCreated());
+    [javac] 		                ^
+    [javac] ./GeocacheTest.java:39: cannot find symbol
+    [javac] symbol  : class Geocache
+    [javac] location: class GeocacheTest
+    [javac] 		Geocache p = new Geocache(1.3, 6.5);
+    [javac] 		^
+    [javac] ./GeocacheTest.java:39: cannot find symbol
+    [javac] symbol  : class Geocache
+    [javac] location: class GeocacheTest
+    [javac] 		Geocache p = new Geocache(1.3, 6.5);
+    [javac] 		                 ^
+    [javac] ./GeocacheTest.java:40: cannot find symbol
+    [javac] symbol  : class Geocache
+    [javac] location: class GeocacheTest
+    [javac] 		Geocache p2 = new Geocache(1.3, 6.5);
+    [javac] 		^
+    [javac] ./GeocacheTest.java:40: cannot find symbol
+    [javac] symbol  : class Geocache
+    [javac] location: class GeocacheTest
+    [javac] 		Geocache p2 = new Geocache(1.3, 6.5);
+    [javac] 		                  ^
+    [javac] ./GeocacheTest.java:41: cannot find symbol
+    [javac] symbol  : class Geocache
+    [javac] location: class GeocacheTest
+    [javac] 		Geocache p3 = new Geocache(1.3, 4.3);
+    [javac] 		^
+    [javac] ./GeocacheTest.java:41: cannot find symbol
+    [javac] symbol  : class Geocache
+    [javac] location: class GeocacheTest
+    [javac] 		Geocache p3 = new Geocache(1.3, 4.3);
+    [javac] 		                  ^
+    [javac] ./GeocacheTest.java:42: cannot find symbol
+    [javac] symbol  : class Geocache
+    [javac] location: class GeocacheTest
+    [javac] 		Geocache p4 = new Geocache(6.5, 6.5);
+    [javac] 		^
+    [javac] ./GeocacheTest.java:42: cannot find symbol
+    [javac] symbol  : class Geocache
+    [javac] location: class GeocacheTest
+    [javac] 		Geocache p4 = new Geocache(6.5, 6.5);
+    [javac] 		                  ^
+    [javac] ./GeocacheTest.java:50: cannot find symbol
+    [javac] symbol  : class Geocache
+    [javac] location: class GeocacheTest
+    [javac] 		Geocache p = new Geocache(3.3, 6.5);
+    [javac] 		^
+    [javac] ./GeocacheTest.java:50: cannot find symbol
+    [javac] symbol  : class Geocache
+    [javac] location: class GeocacheTest
+    [javac] 		Geocache p = new Geocache(3.3, 6.5);
+    [javac] 		                 ^
+    [javac] ./GeocacheTest.java:55: cannot find symbol
+    [javac] symbol  : class Geocache
+    [javac] location: class GeocacheTest
+    [javac] 		Geocache p = new Geocache(2.5, 3.5);
+    [javac] 		^
+    [javac] ./GeocacheTest.java:55: cannot find symbol
+    [javac] symbol  : class Geocache
+    [javac] location: class GeocacheTest
+    [javac] 		Geocache p = new Geocache(2.5, 3.5);
+    [javac] 		                 ^
+    [javac] ./GeocacheTest.java:56: cannot find symbol
+    [javac] symbol  : class Geocache
+    [javac] location: class GeocacheTest
+    [javac] 		Geocache p2 = new Geocache(99.5, 98.5);
+    [javac] 		^
+    [javac] ./GeocacheTest.java:56: cannot find symbol
+    [javac] symbol  : class Geocache
+    [javac] location: class GeocacheTest
+    [javac] 		Geocache p2 = new Geocache(99.5, 98.5);
+    [javac] 		                  ^
+    [javac] ./GeocacheTest.java:69: cannot find symbol
+    [javac] symbol  : class Geocache
+    [javac] location: class GeocacheTest
+    [javac] 		AutomaticScoreCheck.checkPublicPrivateModifiers(Geocache.class);
+    [javac] 		                                                ^
+    [javac] ./GeocacheTest.java:72: cannot find symbol
+    [javac] symbol  : class Geocache
+    [javac] location: class GeocacheTest
+    [javac] 		Geocache p = new Geocache(1.5, 2.5);
+    [javac] 		^
+    [javac] ./GeocacheTest.java:72: cannot find symbol
+    [javac] symbol  : class Geocache
+    [javac] location: class GeocacheTest
+    [javac] 		Geocache p = new Geocache(1.5, 2.5);
+    [javac] 		                 ^
+    [javac] ./GeocacheTest.java:87: cannot find symbol
+    [javac] symbol  : variable Geocache
+    [javac] location: class GeocacheTest
+    [javac] 		Geocache.resetCount();
+    [javac] 		^
+    [javac] ./GeocacheTest.java:89: cannot find symbol
+    [javac] symbol  : class Geocache
+    [javac] location: class GeocacheTest
+    [javac] 		Geocache p0 = new Geocache(1.5, 2.5);
+    [javac] 		^
+    [javac] ./GeocacheTest.java:89: cannot find symbol
+    [javac] symbol  : class Geocache
+    [javac] location: class GeocacheTest
+    [javac] 		Geocache p0 = new Geocache(1.5, 2.5);
+    [javac] 		                  ^
+    [javac] ./GeocacheTest.java:90: cannot find symbol
+    [javac] symbol  : class Geocache
+    [javac] location: class GeocacheTest
+    [javac] 		Geocache p1 = new Geocache(199.5, 198.5);
+    [javac] 		^
+    [javac] ./GeocacheTest.java:90: cannot find symbol
+    [javac] symbol  : class Geocache
+    [javac] location: class GeocacheTest
+    [javac] 		Geocache p1 = new Geocache(199.5, 198.5);
+    [javac] 		                  ^
+    [javac] ./GeocacheTest.java:91: cannot find symbol
+    [javac] symbol  : class Geocache
+    [javac] location: class GeocacheTest
+    [javac] 		Geocache p2 = new Geocache(199.5, 298.5);
+    [javac] 		^
+    [javac] ./GeocacheTest.java:91: cannot find symbol
+    [javac] symbol  : class Geocache
+    [javac] location: class GeocacheTest
+    [javac] 		Geocache p2 = new Geocache(199.5, 298.5);
+    [javac] 		                  ^
+    [javac] ./GeocacheTest.java:92: cannot find symbol
+    [javac] symbol  : class Geocache
+    [javac] location: class GeocacheTest
+    [javac] 		Geocache p3 = new Geocache(p1);
+    [javac] 		^
+    [javac] ./GeocacheTest.java:92: cannot find symbol
+    [javac] symbol  : class Geocache
+    [javac] location: class GeocacheTest
+    [javac] 		Geocache p3 = new Geocache(p1);
+    [javac] 		                  ^
+    [javac] ./GeocacheTest.java:97: cannot find symbol
+    [javac] symbol  : variable Geocache
+    [javac] location: class GeocacheTest
+    [javac] 		Geocache.resetCount();
+    [javac] 		^
+    [javac] ./GeocacheTest.java:98: cannot find symbol
+    [javac] symbol  : class Geocache
+    [javac] location: class GeocacheTest
+    [javac] 		Geocache pAlso0 = new Geocache(1.5, 2.5);
+    [javac] 		^
+    [javac] ./GeocacheTest.java:98: cannot find symbol
+    [javac] symbol  : class Geocache
+    [javac] location: class GeocacheTest
+    [javac] 		Geocache pAlso0 = new Geocache(1.5, 2.5);
+    [javac] 		                      ^
+    [javac] ./KeyValueMapTest.java:14: cannot find symbol
+    [javac] symbol  : class KeyValueMap
+    [javac] location: class KeyValueMapTest
+    [javac] 		KeyValueMap map = new KeyValueMap();
+    [javac] 		^
+    [javac] ./KeyValueMapTest.java:14: cannot find symbol
+    [javac] symbol  : class KeyValueMap
+    [javac] location: class KeyValueMapTest
+    [javac] 		KeyValueMap map = new KeyValueMap();
+    [javac] 		                      ^
+    [javac] ./KeyValueMapTest.java:36: cannot find symbol
+    [javac] symbol  : class KeyValueMap
+    [javac] location: class KeyValueMapTest
+    [javac] 		KeyValueMap map = new KeyValueMap();
+    [javac] 		^
+    [javac] ./KeyValueMapTest.java:36: cannot find symbol
+    [javac] symbol  : class KeyValueMap
+    [javac] location: class KeyValueMapTest
+    [javac] 		KeyValueMap map = new KeyValueMap();
+    [javac] 		                      ^
+    [javac] ./KeyValueMapTest.java:50: cannot find symbol
+    [javac] symbol  : class KeyValueMap
+    [javac] location: class KeyValueMapTest
+    [javac] 		KeyValueMap map = new KeyValueMap();
+    [javac] 		^
+    [javac] ./KeyValueMapTest.java:50: cannot find symbol
+    [javac] symbol  : class KeyValueMap
+    [javac] location: class KeyValueMapTest
+    [javac] 		KeyValueMap map = new KeyValueMap();
+    [javac] 		                      ^
+    [javac] ./KeyValueMapTest.java:65: cannot find symbol
+    [javac] symbol  : class KeyValueMap
+    [javac] location: class KeyValueMapTest
+    [javac] 		AutomaticScoreCheck.checkPublicPrivateModifiers(KeyValueMap.class);
+    [javac] 		                                                ^
+    [javac] ./QueueTest.java:15: cannot find symbol
+    [javac] symbol  : class Queue
+    [javac] location: class QueueTest
+    [javac] 		Queue q = new Queue();
+    [javac] 		^
+    [javac] ./QueueTest.java:15: cannot find symbol
+    [javac] symbol  : class Queue
+    [javac] location: class QueueTest
+    [javac] 		Queue q = new Queue();
+    [javac] 		              ^
+    [javac] ./QueueTest.java:36: cannot find symbol
+    [javac] symbol  : class Queue
+    [javac] location: class QueueTest
+    [javac] 		Queue q = new Queue();
+    [javac] 		^
+    [javac] ./QueueTest.java:36: cannot find symbol
+    [javac] symbol  : class Queue
+    [javac] location: class QueueTest
+    [javac] 		Queue q = new Queue();
+    [javac] 		              ^
+    [javac] ./QueueTest.java:37: cannot find symbol
+    [javac] symbol  : class Queue
+    [javac] location: class QueueTest
+    [javac] 		Queue q2 = new Queue();
+    [javac] 		^
+    [javac] 100 errors
+    [javac] Compile failed; see the compiler error output for details.

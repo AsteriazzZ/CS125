@@ -1,0 +1,11 @@
+Path: work/students/zzhan145/Challenge5-DataStructures
+URL: https://subversion.ews.illinois.edu/svn/sp16-cs125/zzhan145/Challenge5-DataStructures
+Repository Root: https://subversion.ews.illinois.edu/svn/sp16-cs125
+Repository UUID: 391430f4-0411-4dd5-8b27-250df5562fc7
+Revision: 37692
+Node Kind: directory
+Schedule: normal
+Last Changed Author: wlchapma
+Last Changed Rev: 30643
+Last Changed Date: 2016-03-08 13:56:04 -0600 (Tue, 08 Mar 2016)
+

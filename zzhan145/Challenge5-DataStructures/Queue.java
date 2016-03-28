@@ -1,27 +1,56 @@
+/**
+ * @author zzhan145
+ */
 
 public class Queue {
+	private double[] q = new double[0];
+	
 	/** Adds the value to the front of the queue.
 	 * Note the queue automatically resizes as more items are added. */
 	public void add(double value) {
-		throw new RuntimeException("Don't step on the cracks");
+		
+		double[] result = new double[q.length + 1];
+		for(int i = 0; i < q.length; i++)
+			result[i + 1] = q[i];
+		result[0] = value;
+		q = result;
+		
 	}
+	
 	/** Removes the value from the end of the queue. If the queue is empty, returns 0 */
 	public double remove() {
-		throw new RuntimeException("Grilled Cheese");
+		
+		if(q.length == 0){
+			return 0;
+		}else{
+			double[] result = new double[q.length - 1];
+			for(int i = 0; i < result.length; i++)
+				result[i] = q[i];
+			double p = q[result.length];
+			q = result;
+			return p;
+		}
+
 	}
 	
 	/** Returns the number of items in the queue. */
 	public int length() {
-		throw new RuntimeException("I am not a number; I am free man.");		
+		return q.length;		
 	}
 	
 	/** Returns true iff the queue is empty */
 	public boolean isEmpty() {
-		throw new RuntimeException("The butler did it");
+		return q.length == 0;
 	}
 	
 	/** Returns a comma separated string representation of the queue. */
 	public String toString() {
-		throw new RuntimeException("Daisy daisy daisy");
+		
+		String result = "";
+		for(int i = q.length - 1; i > 0; i--)
+			result = result + q[i] + ",";
+		result += q[0];
+		return result;
+		
 	}
 }

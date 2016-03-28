@@ -9,14 +9,14 @@ IMPLEMENTATION REQUIREMENTS
 Your challenge is to implement the following eight classes 
 and become master of Stacks and Queues-
 
-Geocache.java
-GeocacheList.java
-KeyValueMap.java
-Queue.java
+Geocache.java~
+GeocacheList.java~
+KeyValueMap.java~
+Queue.java~
 Stack.java
-CallAStaticMethod.java
-StaticMethodsAreEasy.java
-UsingPublicFieldsIsEasy.java
+CallAStaticMethod.java~
+StaticMethodsAreEasy.java~
+UsingPublicFieldsIsEasy.java~
 
 - such that all of the unit tests pass and the AutomaticGrader gives you 100%.
 

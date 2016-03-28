@@ -1,19 +1,24 @@
 /**
+ * @author zzhan145
+ */
+
+/**
  * Complete the following GeocacheList, to ensure all unit tests pass.
  * There are several errors in the code below
  *
  * Hint: Get the Geocache class working and passing its tests first.
  */
 public class GeocacheList {
+	
 	private Geocache[] data = new Geocache[0];
-	private int size = 0;
+	private int size = data.length;
 
 	public Geocache getGeocache(int i) {
-		return null;
+		return data[i];
 	}
 
 	public int getSize() {
-		return 0;
+		return size;
 	}
 
 	public GeocacheList() {
@@ -22,6 +27,15 @@ public class GeocacheList {
 	public GeocacheList(GeocacheList other, boolean deepCopy) {
 		data = new Geocache[other.data.length];
 		size = other.size;
+		
+		if(deepCopy){
+			for(int i = 0; i < data.length; i++)
+				data[i] = new Geocache(other.data[i].getX(), other.data[i].getY());
+		}
+		else{
+			for(int i = 0; i < data.length; i++)
+				data[i] = other.data[i];
+		}
 		
 	}
 
@@ -36,8 +50,12 @@ public class GeocacheList {
 		data[size-1] = p;
 	}
 
-	public Geocache removeFromTop() {
-		return null;
+	public void removeFromTop() {
+		size--;
+		Geocache[] result = data;
+		data = new Geocache[data.length - 1];
+		for(int i = 0; i < size; i++)
+			data[i] = result[i];
 	}
 
 	public String toString() {

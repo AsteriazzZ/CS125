@@ -1,3 +1,6 @@
+/**
+ * @author zzhan145
+ */
 
 /**
  * Complete the class method 'analyze' that takes a SimplePublicPair object as an argument
@@ -12,7 +15,22 @@
  */
 public class UsingPublicFieldsIsEasy {
 	
-	public static SimplePublicTriple analyze(SimplePublicPair in) {
+	public static SimplePublicTriple analyze(SimplePublicPair pair) {
+		
+		SimplePublicTriple result = new SimplePublicTriple();
+		
+		if(pair.a < pair.b){
+			result.x = pair.a;
+			result.y = pair.b;
+		}else{
+			result.x = pair.b;
+			result.y = pair.a;
+		}
+		
+		int M = pair.a * pair.b;
+		result.description = (pair.a + "*" + pair.b + "=" + M);
+		
+		return result;
 		
 	}
 }

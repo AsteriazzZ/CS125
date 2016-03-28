@@ -1,7 +1,11 @@
+/**
+ * @author zzhan145
+ */
+
 public class StaticMethodsAreEasy {
 // Oh no... Someone removed  the methods but left the comments!!
 // Hint: Get the Geocache class working and passing its tests first.
-
+	
 	/**
 	 * Returns an array of num geocaches. Each geocache is initialized to a random
 	 * (x,y) location.
@@ -13,6 +17,19 @@ public class StaticMethodsAreEasy {
 	 */
 //write the method here...
 	
+    public static Geocache[] createGeocaches(int num){
+    	
+    	Geocache[] arr = new Geocache[0];
+    	if(num < 0)
+    		return arr;
+    	
+    	arr = new Geocache[num];
+    	for(int i = 0; i < num; i++)
+    		arr[i] = new Geocache(Math.random(), Math.random());
+    	return arr;
+    	
+    }
+    
 	/**
 	 * Modifies geocaches if the geocache's X value is less than the allowable minimum
 	 * value.
@@ -24,6 +41,19 @@ public class StaticMethodsAreEasy {
 	 * @return number of modified geocaches (i.e. x values were too small).
 	 */
 	//write the method here...
+    
+    public static int ensureMinimumXValue(Geocache[] p, double minX){
+    	
+    	int count = 0;
+    	for(int i = 0; i < p.length; i++){
+    		if(p[i].getX() < minX){
+    			p[i].setX(minX);
+    			count++;
+    		}
+    	}
+    	return count;
+    	
+    }
 
 	/**
 	 * Counts the number of geocaches that are equal to the given geocache
@@ -35,4 +65,15 @@ public class StaticMethodsAreEasy {
 	 * @return number of matching geocaches
 	 */
 	//write the method here...
+    
+    public static int countEqual(Geocache[] p, Geocache origin){
+    	
+    	int count = 0;
+    	for(int i = 0; i < p.length; i++){
+    		if(p[i].equals(origin))
+    			count++;
+    	}
+    	return count;
+    	
+    }
 }

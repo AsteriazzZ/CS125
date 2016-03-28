@@ -1,4 +1,8 @@
 /**
+ * @author zzhan145
+ */
+
+/**
  * Create a class 'Geocache' with two private instance variables 'x' 'y' of type double and a private integer 'id'
  * .
  * A class variable 'count' will also be required to count the number of times a Geocache object has been created (instantiated).
@@ -24,6 +28,63 @@
  * Create a get method for id.
  * 
  */
-class Geocache {
+public class Geocache {
+	
+	private double x;
+	private double y;
+	private int id;
+	private static int count;
+	
+	public Geocache(double newX, double newY){
+		x = newX;
+		y = newY;
+		id = count;
+		count++;
+	}
+	
+	public Geocache(Geocache newCache){
+		this.x = newCache.x;
+		this.y = newCache.y;
+		this.id = newCache.count;
+		count++;
+	}
+	
+	public static void resetCount(){
+		count = 0;
+	}
+	
+	public static int getNumGeocachesCreated(){
+		return count;
+	}
+	
+	public boolean equals(Geocache newCache){
+		return (this.x == newCache.x && this.y == newCache.y);
+	}
+	
+	public String toString(){
+		String result = "(" + this.x + "," + this.y + ")";
+		return result;
+	}
+	
+	public double getX(){
+		return this.x;
+	}
+	
+	public double getY(){
+		return this.y;
+	}
+	
+	public void setX(double newX){
+		if(newX > -1000 && newX < 1000)
+			this.x = newX;
+	}
+	
+	public void setY(double newY){
+		this.y = newY;
+	}
+	
+	public int getId(){
+		return this.id;
+	}
 
 }

@@ -8,10 +8,11 @@ using std::endl;
 int main()
 {
    cout << "Hey,";
-   string mesg = "this my first C++ program";
+   string mesg = "this my second C++ program";//aa
    mesg += "!";
    cout << mesg << endl;
  
+
   // endl stands for 'end line'
 
    for(int i=0; i<10; i++) {

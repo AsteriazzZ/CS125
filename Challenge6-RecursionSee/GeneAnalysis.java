@@ -10,7 +10,34 @@ public class GeneAnalysis
 	 */
 	public static int score(String gene1, String gene2)
 	{
-		throw new IllegalArgumentException("Not Yet Implemented");
+		if (gene1 == "" || gene2 == "") // Two empty genes
+			return 0;
+		
+		if (gene1.length() == 1 && gene2.length() == 1) { // Two 1-letter genes
+			if (gene1.charAt(0) == gene2.charAt(0))
+				return 1;
+			return 0;
+		}
+		
+		if (gene1.length() == 1) {
+			if (gene1.charAt(0) == gene2.charAt(0)) // Check if the first letter is the same
+				return 1;
+			// The first letter is not the same. Check if we can find it in the later letters of gene2
+			return score(gene1, gene2.substring(1, gene2.length()));
+			
+		}
+		
+		if (gene2.length() == 1) { // Similar as gene1.length == 1
+			if (gene1.charAt(0) == gene2.charAt(0))
+				return 1;
+			return score(gene1.substring(1, gene1.length()), gene2);
+		}
+		
+		if(gene1.charAt(0) == gene2.charAt(0)) // Check if the first letter is the same
+			return 1 + score(gene1.substring(1, gene1.length()), gene2.substring(1, gene2.length()));
+		return Math.max(score(gene1, gene2.substring(1, gene2.length())), 
+				        score(gene1.substring(1, gene1.length()), gene2));
+		
 		// Hint: Use toCharArray() to convert each string to a char array.
 		 // call your recursive implementation here with
 		// the genes as char arrays, starting at the end of each gene.

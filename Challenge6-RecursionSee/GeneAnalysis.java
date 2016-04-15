@@ -1,6 +1,6 @@
 //UIUC CS125 SPRING 2016 MP. File: GeneAnalysis.java, CS125 Project: Challenge6-RecursionSee, Version: 2016-03-27T20:12:33-0500.368833636
 /**
- * @author replace-with-your-netid-here
+ * @author zzhan145
  *
  */
 public class GeneAnalysis

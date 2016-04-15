@@ -1,11 +1,10 @@
 //UIUC CS125 SPRING 2016 MP. File: LinkedList.java, CS125 Project: Challenge6-RecursionSee, Version: 2016-03-27T20:12:33-0500.368833636
 /**
- * @author replace-with-your-netid-here
+ * @author zzhan145
  *
  */
 public class LinkedList {
-	// Get and Set methods are NOT necessary!
-
+	
 	private LinkedList next; 	
 	private final String word;
 
@@ -47,8 +46,14 @@ public class LinkedList {
 	 * @param word
 	 */
 	public void append(String word) {
-		throw new IllegalArgumentException("Not Yet Implemented");
-
+		
+		if (next != null)
+			next.append(word); // BASE CASE
+		
+		// Recursive case:
+		else
+			this.next = new LinkedList(word, null);
+		
 	}
 	/**
 	 * Recursively counts the total number of letters used.
@@ -56,9 +61,14 @@ public class LinkedList {
 	 * @return total number of letters in the words of the linked list
 	 */
 	public int getLetterCount() {
-		throw new IllegalArgumentException("Not Yet Implemented");
-		// returns the total number of letters. word1.length() +
-		// word2.length()+...
+		
+		if (next == null)
+			return this.word.length(); // BASE CASE
+		
+		//Recursive case:
+		return this.word.length() + next.getLetterCount();
+		
+		// returns the total number of letters. word1.length() + word2.length()+...
 		// "A" -> "CAT" -> null returns 1 + 3 = 4.
 	}
 
@@ -67,8 +77,18 @@ public class LinkedList {
 	 * @return the longest word i.e. word.length() is maximal.
 	 */
 	public String getLongestWord() {
-		// recursive searches for the longest word
-		throw new IllegalArgumentException("Not Yet Implemented");
+		
+		if (next == null)
+			return word; // BASE CASE
+		
+		else{ // Recursive case:
+			String result = next.getLongestWord();
+			
+			if (result.length() > word.length())
+				return result;
+			return word;
+			
+		}
 	}
 
 	/** Converts linked list into a sentence (a single string representation).
@@ -76,7 +96,15 @@ public class LinkedList {
 	* A period (".") is appended after the last word.
 	* The last link represents the last word in the sentence.*/
 	public String getSentence() {
-		throw new IllegalArgumentException("Not Yet Implemented");
+		
+		if (next == null)
+			return word + "."; //BASE CASE
+		
+		else{ // Recursive case
+			String restOfString = next.getSentence();
+			return word + " " + restOfString;
+		
+		}
 	}
 	
 	/**
@@ -87,16 +115,37 @@ public class LinkedList {
 	 * from earlier links. This partialResult is initially an empty string. 
 	 */
 	public String getReversedSentence(String partialResult) {
-		throw new IllegalArgumentException("Not Yet Implemented");
+		
+		partialResult = word + partialResult; // Add word to the forward of partialResult
+		if (next == null)
+			return partialResult + "."; // BASE CASE
+		
+		// Recursive case:
+		partialResult = " " + partialResult; // Since next is not null, prepare a space before partialResult
+		return next.getReversedSentence(partialResult);
+		
 	}
 	
 
 	/** Creates a linked list of words from an array of strings.
 	 * Each string in the array is a word. */
 	public static LinkedList createLinkedList(String[] words) {
-		throw new IllegalArgumentException("Not Yet Implemented");
-		// Hint: This is a wrapper method. You'll need to create your
-		// own recursive method.
+		
+		LinkedList result;
+		
+		String[] newWords = new String[words.length - 1]; // The array storing the information of the elements after
+		for (int i = 0; i < newWords.length; i++)
+			newWords[i] = words[i + 1];
+		
+		if (words.length == 1){
+			result = new LinkedList(words[0], null); // BASE CASE
+		}
+		else{ // Recursive case:
+			result = new LinkedList(words[0], createLinkedList(newWords));
+		}
+		return result;
+		
+		// Hint: This is a wrapper method. You'll need to create your own recursive method.
 		// Yes this is possible _without_ loops!
 	}
 
@@ -108,7 +157,15 @@ public class LinkedList {
 	 * @return true if the linked list contains the word (case sensivitive)
 	 */
 	public boolean contains(String word) {
-		throw new IllegalArgumentException("Not Yet Implemented");
+		
+		if (this.word.equals(word)) // Find it! BASE CASE
+			return true;
+		
+		if (next == null) // Have reached the end of the linked list but still didn't find it
+			return false;
+		
+		return next.contains(word); //Recursive case
+		
 	}
 
 	/** Recursively searches for the given word in the linked list.
@@ -119,8 +176,15 @@ public class LinkedList {
 	 * @return The link that contains the search word.
 	 */
 	public LinkedList find(String word) {
-		throw new IllegalArgumentException("Not Yet Implemented");
-
+		
+		if (this.word.equals(word)) // Find it! BASE CASE
+			return this;
+		
+		if (next == null) // Have reached the end of the linked list but still didn't find it
+			return null;
+		
+		return next.find(word); //Recursive case
+		
 	}
 
 	/**
@@ -131,11 +195,36 @@ public class LinkedList {
 	 * @return the last LinkedList object that represents the given word, or null if it is not found.
 	 */
 	public LinkedList findLast(String word) {
-		throw new IllegalArgumentException("Not Yet Implemented");
+		
+		if (this.contains(word)){ // Check if the Linked list truly contains the word
+			
+			if (next == null) // BASE CASE: we have reached the end of the list
+				return this; // There is only one word in the list and the list contains "word"
+			                 // So this is exactly the word
+			
+			else if (next.contains(word)) // Check if we can find the word in the list coming after
+				return next.findLast(word); // If we can find, recursive case
+			return this; // We cannot find the word in the list after, so this word is exactly the one we are looking for.
+			
+		}
+		return null; // It is not found in the list
+		
 	}
 
 	public LinkedList insert(String string) {
-		throw new IllegalArgumentException("Not Yet Implemented");
+		
+		if (string.charAt(0) < word.charAt(0)) {
+			LinkedList result = new LinkedList(string, this);
+			return result;
+		}
+		
+		if(next == null){
+			next = new LinkedList(string,null);
+			return this;
+		}
+		
+		next = next.insert(string);
+		return this;
 	}
 
 }

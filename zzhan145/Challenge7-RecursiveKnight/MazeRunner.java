@@ -7,10 +7,8 @@ public class MazeRunner {
 
 	/** Initializes the MazeRunner with the x,y values */
 	public MazeRunner(int x, int y) {
-		
 		this.x = x;
 		this.y = y;
-		
 	}
 
 	public int getX() {
@@ -31,8 +29,8 @@ public class MazeRunner {
 		
 		if(dir == 'N') this.y++;
 		if(dir == 'S') this.y--;
+		if(dir == 'W') this.x--;
 		if(dir == 'E') this.x++;
-		if(dir == 'E') this.x--;
 		
 	}
 	/** Returns true if this maze runner is on the same (x,y) square
@@ -105,16 +103,34 @@ public class MazeRunner {
 	 */
 	public static String shortestPath(int x, int y, int tX, int tY,
 			boolean blocked[][]) {
+		
 		// TODO: BASE CASES HERE
+		if (x < 0 || y < 0 || x >= blocked.length || y >= blocked[0].length || blocked[x][y] || blocked[tX][tY])
+			return null;
+		if (x == tX && y == tY)
+			return "";
+		
 		blocked[x][y] = true;
 		//String[] paths = { 
 			//TODO: COLLECT RECURSIVE RESULTS HERE
 		//};
+		String options[] = new String[4];
+		options[0] = shortestPath(x, y + 1, tX, tY, blocked);
+		options[1] = shortestPath(x, y - 1, tX, tY, blocked);
+		options[2] = shortestPath(x - 1, y, tX, tY, blocked);
+		options[3] = shortestPath(x + 1, y, tX, tY, blocked);
+		
+		if (options[0] != null) options[0] = "N" + options[0];
+		if (options[1] != null) options[1] = "S" + options[1];
+		if (options[2] != null) options[2] = "W" + options[2];
+		if (options[3] != null) options[3] = "E" + options[3];
+		
 		blocked[x][y] = false;
+		return options[findShortestString(options,0,3)];
 
 		// TODO: Use findShortestString on paths
 		// TODO: Return correct string with Compass direction prepended (or null)
-		return "run away!";
+		
 	}
 
 	/** Moves the runner towards the target position, if the
@@ -124,6 +140,11 @@ public class MazeRunner {
 	 * Hint: watch out for the empty string when target = current position...
 	 */
 	public void chase(boolean maze[][], int targetX, int targetY) {
+		
+		if (shortestPath(this.x, this.y, targetX, targetY, maze) == null) return;
+		if (x == targetX && y == targetY) return;
+		moveOne(shortestPath(this.x, this.y, targetX, targetY, maze).charAt(0));
+		
 		// TODO: Implement chase
 		// Use shortestPath, string.charAt,  moveOne
 	}

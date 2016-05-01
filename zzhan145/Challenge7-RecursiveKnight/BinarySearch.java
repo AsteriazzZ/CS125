@@ -1,4 +1,6 @@
 //UIUC CS125 SPRING 2016 MP. File: BinarySearch.java, CS125 Project: Challenge7-RecursiveKnight, Version: 2016-04-18T08:08:00-0500.951298206
+//@author zzhan145
+
 public class BinarySearch {
 	/** Wrapper method. Just runs the recursive search method below for the entire array*/
 	public static boolean search(int[] array, int key) {
@@ -12,6 +14,12 @@ public class BinarySearch {
 	 * and proceed accordingly.
 	 */
 	static boolean search(int[] array, int key, int lo, int hi) {
-	return false;
+		
+		int mid = (lo + hi) / 2;
+		if (lo > hi) return false;
+		if (array[mid] == key) return true;
+		if (array[mid] > key) return search(array, key, lo, mid - 1);
+		else return search(array, key, mid + 1, hi);
+		
 	}
 }

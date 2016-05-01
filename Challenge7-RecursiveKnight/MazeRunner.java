@@ -1,10 +1,16 @@
 //UIUC CS125 SPRING 2016 MP. File: MazeRunner.java, CS125 Project: Challenge7-RecursiveKnight, Version: 2016-04-18T08:08:00-0500.951298206
+//@author zzhan145
+
 public class MazeRunner {
 
 	private int x, y;
 
 	/** Initializes the MazeRunner with the x,y values */
-	public MazeRunner(int x, int y) {	
+	public MazeRunner(int x, int y) {
+		
+		this.x = x;
+		this.y = y;
+		
 	}
 
 	public int getX() {
@@ -22,12 +28,23 @@ public class MazeRunner {
 	 */
 	void moveOne(char dir) {
 //		 TODO: Implement moveOne
+		
+		if(dir == 'N') this.y++;
+		if(dir == 'S') this.y--;
+		if(dir == 'E') this.x++;
+		if(dir == 'E') this.x--;
+		
 	}
 	/** Returns true if this maze runner is on the same (x,y) square
 	 * as the parameter. Assumes that the parameter is non-null.
 	 */
 	public boolean caught(MazeRunner other) {
-		return false; // TODO: Implement caught
+		
+		if(this.x == other.x && this.y == other.y)
+			return true;
+		else
+			return false;
+		 // TODO: Implement caught
 	}
 
 	/**
@@ -39,7 +56,14 @@ public class MazeRunner {
 	 * Invoke recursion to test the remaining paths (lo +1)
 	 */
 	static int findShortestString(String[] paths, int lo, int hi) {
-		return -1; // TODO: findShortestString
+		// TODO: findShortestString
+		
+		if(lo == hi) return lo;
+		int result = findShortestString(paths, lo + 1, hi);
+		if(safeStringLength(paths[result]) < safeStringLength(paths[lo]))
+			return result;
+		else return lo;
+		
 	}
 
 	/** Returns the length of the string or Integer.MAX_VALUE
@@ -48,7 +72,11 @@ public class MazeRunner {
 	 * @return
 	 */
 	static int safeStringLength(String s) {
-		return -1;//TODO: safeStringLength
+		//TODO: safeStringLength
+		
+		if(s != null) return s.length();
+		else return Integer.MAX_VALUE;
+		
 	}
 
 

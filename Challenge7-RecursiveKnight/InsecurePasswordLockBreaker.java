@@ -1,4 +1,6 @@
 //UIUC CS125 SPRING 2016 MP. File: InsecurePasswordLockBreaker.java, CS125 Project: Challenge7-RecursiveKnight, Version: 2016-04-18T08:08:00-0500.951298206
+//@author zzhan145
+
 public class InsecurePasswordLockBreaker {
 
 	public static char[] breakLock(InsecurePasswordLock lock) {

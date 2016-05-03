@@ -1,0 +1,11 @@
+Path: work/students/zzhan145/Challenge7-RecursiveKnight
+URL: https://subversion.ews.illinois.edu/svn/sp16-cs125/zzhan145/Challenge7-RecursiveKnight
+Repository Root: https://subversion.ews.illinois.edu/svn/sp16-cs125
+Repository UUID: 391430f4-0411-4dd5-8b27-250df5562fc7
+Revision: 55477
+Node Kind: directory
+Schedule: normal
+Last Changed Author: zzhan145
+Last Changed Rev: 53618
+Last Changed Date: 2016-05-01 17:00:08 -0500 (Sun, 01 May 2016)
+
